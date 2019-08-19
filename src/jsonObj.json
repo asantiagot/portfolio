@@ -1,0 +1,26 @@
+
+{
+    "content" : {
+        "name" : "Antonio Santiago",
+        "position" : "Frontend Developer",
+
+        "age" : "25",
+        "location" : "Zapopan, Jalisco",
+        "company" : "Oracle",
+
+        "portfolio" : {
+            "myPortfolio" : {
+                "name" : "Generic Portfolio Generator",
+                "summary" : "A super easy generator that uses a JSON file to create a Web Portfolio",
+                "thumbnail" : "images/myPortfolio.png"
+            }, 
+            
+            "anotherTinder" : {
+                "name" : "A Tinder for Ugly people",
+                "summary" : "Tired of getting 0 matches? Try Yet another Tinder!",
+                "thumbnail" : "images/anotherTinder.png"
+            }
+        }
+    }
+}
+
