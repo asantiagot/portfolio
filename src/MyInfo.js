@@ -6,18 +6,17 @@ import "../styles/style.css";
 
 function NavigationItem(props) {
   return (
-    <li>{props.itemName}</li>
+    <li>{props.itemName.toUpperCase()}</li>
   )
 }
 
-function NavigationBar() {
+function NavigationBar(props) {
   return (
     <nav id="site-nav" role="navigation">
       <ul>
-        <NavigationItem itemName={"HOME"}/>
-        <NavigationItem itemName={"PROJECTS"}/>
-        <NavigationItem itemName={"ABOUT"}/>
-        <NavigationItem itemName={"TRAJECTORY"}/>
+        {props.categories.map((value, index) => {
+          return <NavigationItem key={index} itemName={value}/>
+        })}
       </ul>
     </nav>
   )
@@ -26,7 +25,7 @@ function NavigationBar() {
 function ShortDescription() {
   return (
     <div>
-      {`${content.age} years old ${content.position} from ${content.location}. Currently working at ${content.company}.`}
+      {`${content.contact.age} years old ${content.contact.currentRole} from ${content.contact.location}. Currently working at ${content.contact.company}.`}
     </div>
   );
 }
@@ -34,16 +33,18 @@ function ShortDescription() {
 function PortfolioShowcase() { 
   return (
     <div>
-      <h2>{content.portfolio.length > 1 ? `This is a list of the projects I've worked on:` : `This is the project I've worked on:`}</h2>
+      <h2>{content.projects.length > 1 ? `This is a list of the projects I've worked on:` : `This is the project I've worked on:`}</h2>
     </div>
   )
 }
 function MyInfo() {
+
+  let categories = Object.keys(content);
   return (
     <div>
-      <NavigationBar/>
+      <NavigationBar categories={categories}/>
       <h1>
-        Hello! I'm {content.name}
+        Hello! I'm {content.contact.name}
       </h1>
       <ShortDescription/>
       <PortfolioShowcase/>
