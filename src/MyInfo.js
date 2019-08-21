@@ -22,6 +22,37 @@ function NavigationBar(props) {
   )
 }
 
+// MARK: Contact info
+
+function ContactDescription(props) {
+  return (
+    <div className="contact">
+      <h1>{props.name}</h1>
+      <h2>{props.position}</h2>
+      {/* <h3>{}</h3> */}
+    </div>
+  );
+}
+
+function ContactImage(props) {
+  return (
+    <div className="contact right">
+      <img src={props.image} ></img>
+    </div>
+  );
+}
+
+function Contact(props) {
+  // const shortBio = `${}`;
+  return (
+    <div>
+        <ContactDescription name={props.contact.name} position={props.contact.currentRole}/>
+        <ContactImage image={props.contact.image}/>
+    </div>
+  );
+
+}
+
 function ShortDescription() {
   return (
     <div>
@@ -43,9 +74,8 @@ function MyInfo() {
   return (
     <div>
       <NavigationBar categories={categories}/>
-      <h1>
-        Hello! I'm {content.contact.name}
-      </h1>
+      <Contact contact={content.contact}/>
+
       <ShortDescription/>
       <PortfolioShowcase/>
     </div>

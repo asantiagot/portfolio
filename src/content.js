@@ -8,6 +8,8 @@ let content = {
         age: 25,
         location: "Zapopan, Jalisco",
         company: "Oracle",
+
+        image:'/images/me.png'
     }, 
     
     projects: {
@@ -26,7 +28,7 @@ let content = {
         role_1: {
             company: "Centro de Investigaciones de Diseño Industrial",
             role: "Web UI Developer",
-            description: "Developed the whole UI of an Academic Platform, in conunction with the Design team of the Faculty",
+            description: "Developed the whole UI of an Academic Platform, in conjunction with the Design team of the Faculty",
             date: {
                 start: new Date("May 2015"),
                 end: new Date("January 2016")

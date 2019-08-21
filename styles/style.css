@@ -1,11 +1,11 @@
 body {
-    background-color: darkslategrey;
+    background-color: #525e65;
     color: whitesmoke;
     font-family: 'Helvetica Neue', 'Sans-Serif';
 }
 
 .root {
-    background-color: darkslategrey;
+    background-color: #525e65;
     color: whitesmoke;
     font-family: 'Helvetica Neue', 'Sans-Serif';
 }
@@ -32,4 +32,15 @@ body {
 #site-nav li {
     display: inline-block;
     padding: 10px;
+}
+
+/* CONTACT */
+
+.contact {
+    display: inline-block;
+}
+
+/* GENERAL */
+.right {
+    text-align: right;
 }
