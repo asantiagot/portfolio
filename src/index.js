@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import MyInfo from "./MyInfo";
+import Portfolio from "./MyInfo";
 
 // function Header() {
 //   return (
@@ -11,6 +11,6 @@ import MyInfo from "./MyInfo";
 // }
 
 ReactDOM.render(
-  <MyInfo />,
+  <Portfolio />,
   document.getElementById("root")
 )

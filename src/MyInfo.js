@@ -6,7 +6,12 @@ import "../styles/style.css";
 
 function NavigationItem(props) {
   return (
-    <li>{props.itemName.toUpperCase()}</li>
+    <a href={`#${props.itemName}`}>
+      <li>
+        {props.itemName.toUpperCase()}
+      </li>
+    </a>
+
   )
 }
 
@@ -26,61 +31,64 @@ function NavigationBar(props) {
 
 function ContactDescription(props) {
   return (
-    <div className="contact">
-      <h1>{props.name}</h1>
-      <h2>{props.position}</h2>
-      {/* <h3>{}</h3> */}
-    </div>
+    <section className="contact">
+      <h1>{props.contact.name}</h1>
+      <h2>{props.contact.currentRole}</h2>
+      <h3>
+        {`${props.contact.age} years old ${props.contact.currentRole} from ${props.contact.location}. Currently working at ${props.contact.company}.`}
+      </h3>
+    </section>
   );
 }
 
 function ContactImage(props) {
   return (
-    <div className="contact right">
+    <section className="contact right">
       <img src={props.image} ></img>
-    </div>
+    </section>
   );
 }
 
 function Contact(props) {
-  // const shortBio = `${}`;
   return (
-    <div>
-        <ContactDescription name={props.contact.name} position={props.contact.currentRole}/>
+    <section className="contact">
+        <ContactDescription contact={props.contact}/>
         <ContactImage image={props.contact.image}/>
-    </div>
+    </section>
   );
 
-}
-
-function ShortDescription() {
-  return (
-    <div>
-      {`${content.contact.age} years old ${content.contact.currentRole} from ${content.contact.location}. Currently working at ${content.contact.company}.`}
-    </div>
-  );
 }
 
 function PortfolioShowcase() { 
   return (
-    <div>
+    <section id="#projects">
       <h2>{content.projects.length > 1 ? `This is a list of the projects I've worked on:` : `This is the project I've worked on:`}</h2>
-    </div>
+    </section>
   )
 }
-function MyInfo() {
+
+function Main(props) {
+  return(
+    <main>
+      <Contact contact={props.contact}/>
+      <PortfolioShowcase/>
+    </main>
+  );
+}
+
+function Portfolio() {
 
   let categories = Object.keys(content);
   return (
     <div>
-      <NavigationBar categories={categories}/>
-      <Contact contact={content.contact}/>
-
-      <ShortDescription/>
-      <PortfolioShowcase/>
+      <nav>
+        <NavigationBar categories={categories}/>
+      </nav>
+      <main id="#contact">
+        <Main contact={content.contact}/>
+      </main>
     </div>
-    );
+  );
 }
 
-
-export default hot(module) (MyInfo);
+export default hot(module) (Portfolio);
