@@ -11,8 +11,7 @@ function NavigationItem(props) {
         {props.itemName.toUpperCase()}
       </li>
     </a>
-
-  )
+  );
 }
 
 function NavigationBar(props) {
@@ -24,7 +23,7 @@ function NavigationBar(props) {
         })}
       </ul>
     </nav>
-  )
+  );
 }
 
 // MARK: Contact info
@@ -64,7 +63,7 @@ function PortfolioShowcase() {
     <section id="#projects">
       <h2>{content.projects.length > 1 ? `This is a list of the projects I've worked on:` : `This is the project I've worked on:`}</h2>
     </section>
-  )
+  );
 }
 
 function Main(props) {
@@ -80,14 +79,10 @@ function Portfolio() {
 
   let categories = Object.keys(content);
   return (
-    <div>
-      <nav>
-        <NavigationBar categories={categories}/>
-      </nav>
-      <main id="#contact">
-        <Main contact={content.contact}/>
-      </main>
-    </div>
+    <React.Fragment>
+      <NavigationBar categories={categories}/>
+      <Main contact={content.contact}/>
+    </React.Fragment>
   );
 }
 

@@ -1,13 +1,13 @@
 body {
     background-color: #525e65;
     color: whitesmoke;
-    font-family: 'Helvetica Neue', 'Sans-Serif';
+    font-family: Montserrat, 'Helvetica Neue', 'Sans-Serif';
 }
 
 .root {
     background-color: #525e65;
     color: whitesmoke;
-    font-family: 'Helvetica Neue', 'Sans-Serif';
+    font-family: Montserrat, 'Helvetica Neue', 'Sans-Serif';
 }
 
 /* NAVIGATION BAR */
@@ -43,4 +43,9 @@ body {
 /* GENERAL */
 .right {
     text-align: right;
+}
+
+h1 {
+    font-size: 6em;
+    font-family: Montserrat;
 }
