@@ -11,6 +11,11 @@ let content = {
 
         image:'/images/me.png'
     }, 
+
+    accounts: {
+        github: 'https://github.com/asantiagot',
+        linkedin: 'https://www.linkedin.com/in/asantiagot/'
+    },
     
     projects: {
         myPortfolio: {

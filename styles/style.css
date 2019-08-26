@@ -1,51 +1,119 @@
-body {
-    background-color: #525e65;
-    color: whitesmoke;
-    font-family: Montserrat, 'Helvetica Neue', 'Sans-Serif';
-}
-
-.root {
-    background-color: #525e65;
-    color: whitesmoke;
-    font-family: Montserrat, 'Helvetica Neue', 'Sans-Serif';
-}
-
-/* NAVIGATION BAR */
-
-#site-nav {
-    /* position: fixed; */
-    /* top: 0;
-    left: 0; */
-    /* width: 100%; */
-    /* min-width: 20rem; */
-    /* z-index: 999; */
-    background-color: #525e65;
-    text-align: center;
-    box-shadow: 0 7px 20px 0 rgba(0,0,0,0.2), 0 4px 10px 0 rgba(0,0,0,0.2);
-}
-
-#site-nav ul {
+/* || GENERAL */
+html, body {
     margin: 0;
-    list-style: none;
+    padding: 0;
+    font-family: sans-serif;
 }
 
-#site-nav li {
+html {
+    background-color: #242423;
+    color: aliceblue;
+}
+
+body {
+    width: 80%;
+    /* min-width: 800px; */
+    margin: 5em;
+    justify-content: center;
+    align-items: center;
+    /* display: flex; */
+}
+
+::selection {
+    color: white;
+    background: #FF01f3;
+    
+}
+
+/* || TYPOGRAPHY */
+h1 {
+    font-size: 5em;
+    font-family: 'Montserrat';
+    margin: 0 auto;
+}
+
+h2 {
+    font-size: 3em;
+    font-family: 'Raleway';
+    margin: 0 auto;
+}
+
+h3 {
+    font-size: 1em;
+    font-weight: lighter;
+} */
+
+/* || NAVIGATION BAR */
+
+nav {
+    height: 50px;
+    flex: 100%;
+    display: flex;
+}
+
+nav ul {
+    padding: 0;
+    list-style-type: none;
+    flex: 2;
+    display: flex;
+}
+  
+nav li {
+    display: inline;
+    text-align: center;
+    flex: 1;
+}
+
+nav a {
     display: inline-block;
-    padding: 10px;
+    font-size: 2rem;
+    height: 3rem;
+    line-height: 1.7;
+    text-transform: uppercase;
+    text-decoration: none;  
 }
 
+nav a:visited {
+    color: white;
+}
+
+/* MAIN */
+main {
+    margin-top: 5em;
+}
 /* CONTACT */
 
 .contact {
-    display: inline-block;
+    display: flex;
+    margin-top: 8em;
+    margin-bottom: 8em;
 }
 
-/* GENERAL */
-.right {
-    text-align: right;
+.contact .image {
+    margin-left: 5em;
 }
 
-h1 {
-    font-size: 6em;
-    font-family: Montserrat;
+.accountBar {
+    list-style-type: none;
+    display: flex;
 }
+
+.accountBar a {
+    font-size: 2em;
+    color: white;
+    padding: 0 0.2em;
+}
+
+.accountBar a:first-child {
+    padding-left: 0;
+}
+
+.accountBar a:last-child {
+    padding-right: 0;
+}
+
+.accountBar a:hover {
+    color: #FF01f3;
+}
+
+
