@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack-dev-server --mode development",
-    "build": "webpack --mode development"
+    "start": "webpack-dev-server --open --config webpack.dev.js",
+    "build": "webpack --config webpack.prod.js"
   },
   "author": "Antonio Santiago",
   "license": "ISC",
@@ -16,15 +16,18 @@
     "@babel/preset-env": "^7.1.0",
     "@babel/preset-react": "^7.0.0",
     "babel-loader": "^8.0.2",
+    "clean-webpack-plugin": "^3.0.0",
     "css-loader": "^1.0.0",
+    "html-webpack-plugin": "^3.2.0",
     "style-loader": "^0.23.0",
-    "webpack": "^4.19.1",
-    "webpack-cli": "^3.1.1",
-    "webpack-dev-server": "^3.7.2"
+    "webpack-merge": "^4.2.2"
   },
   "dependencies": {
     "react": "^16.8",
     "react-dom": "^16.8",
-    "react-hot-loader": "^4.3.11"
+    "react-hot-loader": "^4.3.11",
+    "webpack": "^4.39.3",
+    "webpack-cli": "^3.1.1",
+    "webpack-dev-server": "^3.7.2"
   }
 }
