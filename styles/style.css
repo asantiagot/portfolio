@@ -39,7 +39,7 @@ h2 {
 }
 
 h3 {
-    font-size: 1em;
+    font-size: 2em;
     font-weight: lighter;
 } */
 
@@ -96,6 +96,8 @@ main {
 .accountBar {
     list-style-type: none;
     display: flex;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
 }
 
 .accountBar a {
@@ -115,5 +117,21 @@ main {
 .accountBar a:hover {
     color: #FF01f3;
 }
+
+.trajectoryHeading {
+    display: flex;
+    margin-bottom: 0.1em;
+}
+
+.company, .trajectoryHeading h3 {
+    margin-right: 0.3em;
+    margin-bottom: 0.1em;
+}
+
+.role {
+    margin-top: 0.3em;
+    margin-bottom: 0.3em;
+}
+
 
 
